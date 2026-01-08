@@ -60,7 +60,7 @@ const Hero = () => {
               aria-hidden="true"
             />
             <div className="flex flex-col gap-5">
-              <h1 className="text-3xl md:text-2xl leading-16 text-midnight_text text-center lg:text-start mx-auto lg:mx-0 pt-5">
+              <h1 className="text-2xl md:text-2xl leading-16 text-midnight_text text-center lg:text-start mx-auto lg:mx-0 pt-5">
                 MIỄN PHÍ THƯ VIỆN SỐ HƠN +5.000 ĐỀ THI CÂU HỎI
               </h1>
               <p className="text-black/75 text-lg font-normal text-center lg:text-start max-w-2xl mx-auto lg:mx-0">

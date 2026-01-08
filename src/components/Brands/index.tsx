@@ -46,16 +46,14 @@ const Brands = () => {
   return (
     <section id="pricing" className="bg-header relative py-20">
       <div className="container px-4">
-        <h1 className="text-center text-3xl md:text-2xl">
+        <h1 className="text-center text-2xl md:text-2xl">
           Hướng dẫn Đăng ký để nhận & lưu trữ thư viện miễn phí.
         </h1>
 
         {/* Yearly/Monthly Toggle Buttons */}
         <div className="mt-6 relative">
           <div className="bg-white rounded-2xl p-6 shadow-md mx-auto">
-            <p className="text-center text-2xl font-medium">
-              Học phí đã bao gồm
-            </p>
+
             <div
               className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mt-5
             "

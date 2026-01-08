@@ -87,7 +87,7 @@ export default function Video() {
         <div className="container relative z-10">
           {/* Section Title */}
           <div className="mb-10 text-center md:mb-12 lg:mb-16">
-            <h2 className=" font-bold leading-tight text-blue-900 dark:text-white sm:text-3xl text-3xl md:text-3xl">
+            <h2 className=" font-bold leading-tight text-blue-900 dark:text-white sm:text-3xl text-2xl md:text-3xl">
               Thư viện Blue Edu phù hợp với ai?
             </h2>
           </div>
