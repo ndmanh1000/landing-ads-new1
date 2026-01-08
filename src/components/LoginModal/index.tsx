@@ -131,12 +131,12 @@ export default function LoginModal() {
             <div className="mb-6 text-center">
               <h2
                 id="login-modal-title"
-                className="text-2xl font-bold text-gray-900 dark:text-white"
+                className="text-md font-bold text-gray-900 dark:text-white"
               >
-                Vào kho tài liệu
+                Đăng nhập nhanh vào kho tài liệu Blue Edu
               </h2>
-              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                Dành cho Giáo viên trên Blue Edu
+              <p className="text-sm text-gray-600 dark:text-gray-400 text-center mt-2 md:mt-2">
+                ⏱ Dùng ngay - Không cần cài đặt
               </p>
             </div>
 
@@ -158,9 +158,7 @@ export default function LoginModal() {
                 shape="rectangular"
                 width="300"
               />
-              <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
-                ⏱ Dùng ngay - Không cần cài đặt
-              </p>
+
             </div>
 
             {/* Terms */}

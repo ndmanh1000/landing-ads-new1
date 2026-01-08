@@ -10,7 +10,7 @@ const Brands = () => {
       icon: "/images/logo/setting1.svg",
       text: (
         <>
-          Bước 1: Thầy/cô ấn vào nút "<span className="font-bold text-black">Nhận tài liệu miễn phí</span>"
+          Bước 1: Thầy/cô ấn vào nút &quot;<span className="font-bold text-black">Nhận tài liệu miễn phí</span>&quot;
         </>
       ),
     },
@@ -37,11 +37,10 @@ const Brands = () => {
       icon: "/images/logo/setting1.svg",
       text: (
         <>
-          Bước 3: Ấn vào mục "<span className="font-bold text-black">Học liệu</span>" bên phải và bắt đầu sử dụng miễn phí
+          Bước 3: Ấn vào mục &quot;<span className="font-bold text-black">Học liệu</span>&quot; bên phải và bắt đầu sử dụng miễn phí
         </>
       ),
     },
-
   ];
 
   return (
