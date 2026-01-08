@@ -133,10 +133,10 @@ export default function LoginModal() {
                 id="login-modal-title"
                 className="text-2xl font-bold text-gray-900 dark:text-white"
               >
-                Đăng nhập BlueEDU
+                Vào kho tài liệu
               </h2>
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                Đăng nhập để trải nghiệm nền tảng
+                Dành cho Giáo viên trên Blue Edu
               </p>
             </div>
 
@@ -148,7 +148,7 @@ export default function LoginModal() {
             )}
 
             {/* Google Login Button */}
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center gap-3">
               <GoogleLogin
                 onSuccess={handleGoogleSuccess}
                 onError={handleGoogleError}
@@ -158,6 +158,9 @@ export default function LoginModal() {
                 shape="rectangular"
                 width="300"
               />
+              <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
+                ⏱ Dùng ngay - Không cần cài đặt
+              </p>
             </div>
 
             {/* Terms */}

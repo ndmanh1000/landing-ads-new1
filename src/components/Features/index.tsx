@@ -1,7 +1,7 @@
 "use client";
 import { Icon } from "@iconify/react";
 import { useMemo } from "react";
-import Button from "@/components/Common/Button";
+
 import { useLogin } from "@/contexts/LoginContext";
 
 const Features = () => {
@@ -38,17 +38,18 @@ const Features = () => {
       <div className="container relative z-10">
         <div className="bg-Lightsuccess bg-[url('/images/logo/bg-lines.png')] bg-no-repeat bg-contain bg-right-bottom rounded-2xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-4 lg:space-x-1 py-8 md:py-10 lg:py-11 px-8 md:px-12 lg:px-16 items-stretch">
-            <div className="md:col-span-1 lg:col-span-6 flex justify-center items-center">
+            <div className="md:col-span-1 lg:col-span-6 flex justify-center items-stretch h-full">
               <div className="w-full max-w-md md:max-w-lg lg:max-w-none h-full flex items-center justify-center">
                 <div className="w-full h-full flex items-center justify-center">
                   <img src="/images/logo/tap2.png" alt="tap2" className="w-full h-full object-contain" />
                 </div>
               </div>
             </div>
-            <div className="md:col-span-1 lg:col-span-6 flex flex-col gap-7 md:pl-8 lg:pl-24 mt-10 md:mt-0 lg:mt-0 justify-center">
+            <div className="md:col-span-1 lg:col-span-6 flex flex-col gap-7 md:pl-8 lg:pl-24 mt-10 md:mt-0 lg:mt-0 justify-center h-full min-h-[400px] md:min-h-[500px]">
               <h1 className="text-midnight_text  text-center lg:text-start! lg:leading-14 text-3xl md:text-xl leading-16">
                 THƯ VIỆN 5000 CÂU HỎI GỒM NHỮNG GÌ?
               </h1>
+              <p className=" md:max-w-md flex-wrap text-2xl md:text-xl text-green-500">Câu hỏi đã được sắp xếp & lưu trữ sẵn, Thầy/Cô không cần nhập lại từ đầu</p>
               <ul className="flex flex-col gap-3">
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -63,18 +64,18 @@ const Features = () => {
                 ))}
               </ul>
 
-              <div className="flex justify-center lg:justify-start">
+              <div className="flex flex-col items-center lg:items-start gap-2">
                 <div>
-
-
                   <button
                     onClick={openLoginModal}
-                    className="bg-yellow-400 cursor-pointer hover:bg-yellow-500 text-gray-700 font-medium text-base lg:text-lg p-2 rounded-lg transition duration-300 "
+                    className="bg-yellow-400 cursor-pointer hover:bg-yellow-500 text-black font-bold text-base lg:text-lg p-2 rounded-lg transition duration-300 "
                   >
                     Nhận tài liệu miễn phí
                   </button>
-
                 </div>
+                <p className="text-sm lg:text-base text-yellow-600 dark:text-yellow-400 font-bold text-center lg:text-left animate-blink">
+                  Dùng ngay sau 5s - Không cần cài đặt
+                </p>
               </div>
             </div>
           </div>
