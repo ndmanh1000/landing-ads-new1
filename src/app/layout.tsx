@@ -54,7 +54,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           {children}
-          {/* <Footer /> */}
+          <Footer />
           <ScrollToTop />
           <LoginModal />
         </Providers>

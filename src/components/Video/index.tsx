@@ -81,7 +81,7 @@ export default function Video() {
         <div className="container relative z-10">
           {/* Section Title */}
           <div className="mb-10 text-center md:mb-12 lg:mb-16">
-            <p className=" font-bold leading-tight text-blue-900 dark:text-white sm:text-3xl text-2xl md:text-3xl">
+            <p className=" font-bold leading-tight text-blue-900 dark:text-white sm:text-3xl text-2xl md:text-2xl">
               EDU GIẢI QUYẾT NHƯ THẾ NÀO?
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-400">Blue Edu cho Giáo viên – Trợ thủ AI hỗ trợ toàn diện dạy và học</p>

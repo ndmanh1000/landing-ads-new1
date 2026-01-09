@@ -41,11 +41,11 @@ const AboutSectionOne = () => {
       <div className="container relative z-10">
         {/* Section Title */}
         <div className="mb-12 text-center animate-fade-in-down">
-          <h2 className="mb-4 text-xl font-extrabold leading-tight text-black dark:text-white sm:text-2xl md:text-3xl lg:text-4xl">
+          <p className="mb-4 text-xl font-extrabold leading-tight text-black dark:text-white sm:text-2xl md:text-2xl">
             <span className="bg-gradient-to-r from-primary via-purple-600 to-primary bg-clip-text text-transparent">
               TẠI SAO GIÁO VIÊN DẠY THÊM PHÙ HỢP VỚI BLUE EDU?
             </span>
-          </h2>
+          </p>
         </div>
 
         {/* Cards Grid */}
@@ -71,7 +71,7 @@ const AboutSectionOne = () => {
 
                   {/* Text Box Overlay - Chèn lên ảnh với chiều cao bằng nhau */}
                   <div className="relative -mt-10 mx-2 flex flex-col rounded-xl bg-white p-4 shadow-xl transition-all duration-300 group-hover:shadow-2xl md:mx-2 md:p-5 lg:p-6">
-                    <h3 className="flex min-h-[3rem] items-center justify-center text-center text-sm font-bold leading-tight text-gray-900 md:min-h-[3.5rem] md:text-base lg:min-h-[4rem] lg:text-lg">
+                    <h3 className="flex min-h-[3rem] items-center justify-center text-center text-sm font-bold leading-tight text-gray-900 md:min-h-[3.5rem] md:text-base lg:min-h-[4rem] lg:text-sm">
                       {card.title}
                     </h3>
 

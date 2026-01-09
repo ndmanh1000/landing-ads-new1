@@ -47,12 +47,12 @@ const Features = () => {
           <div className="flex flex-col gap-8 md:gap-10 lg:gap-12 py-10 md:py-12 lg:py-16 px-6 md:px-10 lg:px-20">
             {/* Header Section - Title & Highlight */}
             <div className="flex flex-col gap-4 md:gap-6 text-center animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              <h1 className="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-extrabold leading-tight">
-                <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+              <p className="text-gray-900 text-2xl md:text-2xl font-extrabold leading-tight uppercase">
+                <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent ">
                   1 Ngày Thầy/Cô tự xoay xở với... trăm công nghìn việc
                 </span>
-              </h1>
-              <p className="text-lg md:text-xl lg:text-2xl text-green-600 font-semibold leading-relaxed max-w-3xl mx-auto">
+              </p>
+              <p className="text-lg md:text-lg text-green-600 font-semibold leading-relaxed max-w-3xl mx-auto">
                 Câu hỏi đã được sắp xếp & lưu trữ sẵn, Thầy/Cô không cần nhập lại từ đầu
               </p>
             </div>

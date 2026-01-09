@@ -3,70 +3,87 @@
 
 "use client";
 
-import VideoModal from "../video-modal";
 import Image from "next/image";
-import { useState } from "react";
-import SectionTitle from "../Common/SectionTitle";
+import { useLogin } from "@/contexts/LoginContext";
 
 export default function Media() {
-  const [isOpen, setOpen] = useState(false);
+  const { openLoginModal } = useLogin();
+
 
   return (
     <>
-      <section id="media" className="relative z-10 py-12 md:py-16 lg:py-20">
-        <div className="container">
-          <SectionTitle
-            title="Video demo"
-            paragraph="Xem video demo để hiểu rõ hơn về tính năng của Blue Edu"
-            center
-            mb="80px"
-          />
-        </div>
-        <div className="relative overflow-hidden">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4">
-              <div className="mx-auto max-w-[770px] overflow-hidden rounded-md">
-                <div className="relative aspect-77/40 items-center justify-center">
-                  <Image
-                    src="/images/logo/Thumbnail.jpeg"
-                    alt="video image"
-                    className="object-cover"
-                    fill
-                  />
-                  <div className="absolute top-0 right-0 flex h-full w-full items-center justify-center">
-                    <button
-                      aria-label="video play button"
-                      onClick={() => setOpen(true)}
-                      className="text-primary flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white/75 transition hover:bg-white"
-                    >
-                      <svg
-                        width="16"
-                        height="18"
-                        viewBox="0 0 16 18"
-                        className="fill-current"
-                      >
-                        <path d="M15.5 8.13397C16.1667 8.51888 16.1667 9.48112 15.5 9.86602L2 17.6603C1.33333 18.0452 0.499999 17.564 0.499999 16.7942L0.5 1.20577C0.5 0.43597 1.33333 -0.0451549 2 0.339745L15.5 8.13397Z" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
+      <section id="media" className="w-full bg-white py-16">
+        <p className="text-center text-2xl font-bold uppercase ">Đội ngũ hỗ trợ Giáo viên</p>
+        <div className="container mx-auto px-4 md:mt-10 mt-4">
+          <div className="relative">
+
+
+            {/* Image */}
+            <div className="relative w-full h-[420px] overflow-visible">
+              <div className="absolute left-0 top-0 w-full lg:w-[60%] h-full overflow-hidden rounded-md md:rounded-tr-[40px]">
+                <Image
+                  src="/images/hero/52.jpg"
+                  alt="Classroom"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
+
+            {/* Decorative Circle */}
+            <div className="hidden lg:block absolute right-10 top-8 translate-x-1/2 z-10">
+              <div className="w-32 h-32 bg-green-500 rounded-full"></div>
+            </div>
+
+            {/* Content Box - Chèn lên ảnh và giới hạn chiều rộng */}
+            <div className="relative lg:absolute lg:right-0 z-30 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-8 mt-8 lg:mt-0 w-full lg:w-[45%] max-w-[calc(100%-2rem)] lg:max-w-[600px]" id="media-content">
+              <div className="bg-gradient-to-b from-lime-300 to-emerald-200 rounded-3xl p-8 lg:p-10 shadow-xl">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  EDU luôn sẵn sàng đồng hành 24/7 cùng Thầy/Cô
+                </h3>
+
+
+
+                <ul className="space-y-4 text-gray-900">
+                  <li className="flex gap-3">
+                    <span className="text-xl">•</span>
+                    <span>
+                      Tạo đề nhanh hơn từ thư viện có sẵn
+                    </span>
+                  </li>
+
+                  <li className="flex gap-3">
+                    <span className="text-xl">•</span>
+                    <span>
+                      Chấm bài tự động bằng AI
+                    </span>
+                  </li>
+
+                  <li className="flex gap-3">
+                    <span className="text-xl">•</span>
+                    <span>
+                      Quản lý bài tập & kết quả học sinh
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
           </div>
 
-          <div className="absolute right-0 bottom-0 left-0 z-[-1] h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat">
-            {/* <div className="absolute bottom-0 left-0 right-0 z-[-1] "> */}
-            {/* <img src="/images/video/shape.svg" alt="shape" className="w-full" /> */}
+          {/* Button - Đặt giữa trang */}
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={openLoginModal}
+              className="bg-primary cursor-pointer hover:bg-primary/90 text-white font-bold text-base lg:text-lg px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary/50 focus:ring-offset-2 active:scale-95"
+            >
+              Trải nghiệm EDU để thấy sự khác biệt
+            </button>
           </div>
         </div>
       </section>
 
-      <VideoModal
-        isOpen={isOpen}
-        onClose={() => setOpen(false)}
-        channel="custom"
-        src="https://static.blueedu.vn/demo/out.m3u8"
-      />
+
     </>
   );
 };
