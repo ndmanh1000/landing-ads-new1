@@ -70,7 +70,7 @@ export default function Story() {
                           <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-purple-600 text-white shadow-md">
                             <span className="text-lg font-bold">❓</span>
                           </div>
-                          <h3 className="flex-1 pt-1 text-base font-bold leading-tight text-gray-900 dark:text-white sm:text-lg md:text-lg">
+                          <h3 className="flex-1 pt-1 text-sm font-bold leading-tight text-gray-900 dark:text-white sm:text-lg md:text-lg">
                             {item.question}
                           </h3>
                         </div>
@@ -107,7 +107,7 @@ export default function Story() {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                               </svg>
                             </div>
-                            <p className="flex-1 text-sm leading-relaxed text-gray-700 dark:text-gray-300 sm:text-base md:text-md">
+                            <p className="flex-1 text-xs leading-relaxed text-gray-700 dark:text-gray-300 sm:text-base md:text-md">
                               {item.answer}
                             </p>
                           </div>

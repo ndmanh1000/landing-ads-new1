@@ -36,7 +36,7 @@ export default function Media() {
             </div>
 
             {/* Content Box - Chèn lên ảnh và giới hạn chiều rộng */}
-            <div className="relative lg:absolute lg:right-0 z-30 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-8 mt-8 lg:mt-0 w-full lg:w-[45%] max-w-[calc(100%-2rem)] lg:max-w-[600px]" id="media-content">
+            <div className="relative -right-4 -top-20 md:-top-0 md:-right-0 lg:absolute lg:right-0 z-30 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-8 mt-8 lg:mt-0 w-full lg:w-[45%] max-w-[calc(100%-2rem)] lg:max-w-[600px]" id="media-content">
               <div className="bg-gradient-to-b from-lime-300 to-emerald-200 rounded-3xl p-8 lg:p-10 shadow-xl">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   EDU luôn sẵn sàng đồng hành 24/7 cùng Thầy/Cô

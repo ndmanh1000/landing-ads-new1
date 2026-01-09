@@ -81,7 +81,7 @@ const Features = () => {
                       icon="mdi:check-circle"
                       className="text-green-600 text-xl lg:text-2xl flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300"
                     />
-                    <span className="text-base lg:text-lg text-gray-800 leading-relaxed font-medium group-hover:text-gray-900 transition-colors duration-300">
+                    <span className="text-sm lg:text-lg text-gray-800 leading-relaxed font-medium group-hover:text-gray-900 transition-colors duration-300">
                       {feature}
                     </span>
                   </li>
