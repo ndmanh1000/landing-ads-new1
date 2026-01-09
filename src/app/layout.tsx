@@ -52,7 +52,10 @@ export default function RootLayout({
       <body className={`bg-[#FCFCFC] ${inter.className}`}>
         <Metadata />
         <Providers>
-          <Header />
+          <div className="mt-0 md:mt-24">
+            <Header />
+          </div>
+
           {children}
           <Footer />
           <ScrollToTop />
