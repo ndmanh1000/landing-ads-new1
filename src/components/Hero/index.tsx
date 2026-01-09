@@ -60,95 +60,99 @@ const Hero = () => {
               aria-hidden="true"
             />
             <div className="flex flex-col gap-5">
-              <h1 className="text-2xl md:text-2xl leading-16 text-midnight_text text-center lg:text-start mx-auto lg:mx-0 pt-5">
-                MIỄN PHÍ THƯ VIỆN SỐ HƠN +5.000 ĐỀ THI CÂU HỎI
-              </h1>
-              <p className="text-black/75 text-lg font-normal text-center lg:text-start max-w-2xl mx-auto lg:mx-0">
-                Dành riêng cho giáo viên dạy cá nhân, dạy thêm hoặc tại trung
-                tâm
-              </p>
-              <div className="text-center lg:text-start max-w-2xl mx-auto lg:mx-0 mt-2">
-                <div className="flex items-stretch gap-2 lg:gap-4 justify-center lg:justify-start overflow-hidden">
-                  <div className="flex flex-col flex-shrink-0 justify-center">
-                    <span className="text-black text-sm lg:text-xl  font-bold whitespace-nowrap">
-                      TIẾT KIỆM
-                    </span>
-                    <span className="text-black text-sm lg:text-xl  font-bold whitespace-nowrap">
-                      THỜI GIAN
-                    </span>
-                  </div>
-                  <span className="text-primary text-2xl lg:text-3xl font-bold flex-shrink-0 flex items-center">
-                    80%
+              {/* Badge với border và text AI */}
+              <div className="relative inline-flex items-center justify-center lg:justify-start mb-2 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+                <div className="relative inline-flex items-center gap-2 px-5 py-2.5 border-2 border-primary/30 rounded-full bg-gradient-to-r from-white/95 to-blue-50/90 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:border-primary/50 hover:scale-105">
+                  <span className="text-xl animate-pulse">✨</span>
+                  <span className="text-sm lg:text-base font-semibold text-gray-800 bg-gradient-to-r from-gray-800 to-gray-700 bg-clip-text text-transparent">
+                    Trợ thủ AI cho Giáo viên dạy thêm & dạy online
                   </span>
-                  <div className="mx-1 lg:mx-2 w-px bg-black/40 flex-shrink-0"></div>
-                  <div className="flex flex-col flex-shrink-0 min-w-0 justify-center">
-                    <span className="text-primary text-sm lg:text-2xl  font-bold whitespace-nowrap">
-                      56 tài khoản free
-                    </span>
-                    <span className="text-black text-xs lg:text-lg font-medium whitespace-nowrap">
-                      cho Thầy/Cô trải nghiệm
-                    </span>
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-md animate-bounce">
+                    HOT
                   </div>
                 </div>
               </div>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-extrabold text-gray-900 text-center lg:text-start mx-auto lg:mx-0 pt-5 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                <span className="bg-gradient-to-r from-primary via-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                  Giảm đến 80% thời gian soạn – giao – chấm bài
+                </span>
+              </h1>
+              <p className="text-black/80 text-lg lg:text-xl font-medium text-center lg:text-start max-w-2xl mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                Đơn giản, dễ dùng - Không cần cài đặt
+              </p>
+              <div className="text-center lg:text-start max-w-2xl mx-auto lg:mx-0 mt-2 animate-fade-in-up" id="t1" style={{ animationDelay: '0.4s' }}>
+                <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 justify-center lg:justify-start">
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg lg:text-2xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent animate-pulse-slow">
+                      Tặng thư viện số <span className="text-2xl lg:text-3xl text-primary">+5.000</span>
+                    </span>
+                  </div>
+                  <span className="hidden sm:inline text-gray-400 text-xl font-bold mx-1">|</span>
+                  <span className="text-gray-700 text-base lg:text-xl font-semibold">
+                    Trọn bộ đề thi, câu hỏi chuẩn BGD
+                  </span>
+                </div>
+              </div>
               <div className="mt-4 max-w-full overflow-hidden">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-2 lg:gap-3 justify-center lg:justify-start">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4 justify-center lg:justify-start">
                   {/* Card 1: Truy cập tài liệu độc quyền */}
-                  <div className="bg-gray-100 border border-gray-300 rounded-lg p-2.5 lg:p-3 flex items-center justify-center flex-1 min-w-0 transition-all duration-300 hover:shadow-md hover:border-gray-400 hover:scale-105 relative overflow-hidden group">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-lg p-3 lg:p-4 flex items-center justify-center flex-1 min-w-0 transition-all duration-300 hover:shadow-lg hover:border-blue-400 hover:scale-105 hover:-translate-y-1 relative overflow-hidden group animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
                     <div className="flex flex-col min-w-0 relative z-10">
-                      <span className="text-gray-800 font-medium text-xs lg:text-sm leading-tight break-words ">
-                        Tài liệu chuẩn BGD
+                      <span className="text-gray-800 font-semibold text-xs lg:text-sm leading-tight break-words">
+                        1 Nền tảng thay thế mọi công cụ
                       </span>
                     </div>
                   </div>
 
                   {/* Card 2: Nhóm hỗ trợ học tập 24/7 */}
-                  <div className="bg-gray-100 border border-gray-300 rounded-lg p-2.5 lg:p-3 flex items-center justify-center flex-1 min-w-0 transition-all duration-300 hover:shadow-md hover:border-gray-400 hover:scale-105 relative overflow-hidden group">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
+                  <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 rounded-lg p-3 lg:p-4 flex items-center justify-center flex-1 min-w-0 transition-all duration-300 hover:shadow-lg hover:border-purple-400 hover:scale-105 hover:-translate-y-1 relative overflow-hidden group animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
                     <div className="flex flex-col min-w-0 relative z-10">
-                      <span className="text-gray-800 font-medium text-xs lg:text-sm leading-tight break-words">
-                        Dùng ngay cho giảng dạy
+                      <span className="text-gray-800 font-semibold text-xs lg:text-sm leading-tight break-words">
+                        Mở là dùng ngay
                       </span>
                     </div>
                   </div>
 
                   {/* Card 3: Chứng nhận hoàn thành khóa học */}
-                  <div className="bg-gray-100 border border-gray-300 rounded-lg p-2.5 lg:p-3 flex items-center justify-center flex-1 min-w-0 transition-all duration-300 hover:shadow-md hover:border-gray-400 hover:scale-105 relative overflow-hidden group">
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200 rounded-lg p-3 lg:p-4 flex items-center justify-center flex-1 min-w-0 transition-all duration-300 hover:shadow-lg hover:border-green-400 hover:scale-105 hover:-translate-y-1 relative overflow-hidden group animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
                     <div className="flex flex-col min-w-0 relative z-10">
-                      <span className="text-gray-800 font-medium text-xs lg:text-sm leading-tight break-words">
-                        Sử dụng trọn đời
+                      <span className="text-gray-800 font-semibold text-xs lg:text-sm leading-tight break-words">
+                        Phù hợp dạy thêm và online
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="mx-auto lg:mx-0">
-                <div
-
-                >
+              <div className="mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+                <div className="flex flex-col items-center lg:items-start gap-2">
                   <button
                     onClick={openLoginModal}
-                    className="text-white font-bold cursor-pointer text-base lg:text-lg p-2 rounded-lg transition-all duration-300 border border-primary bg-primary hover:bg-transparent hover:cursor-pointer hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:scale-95"
+                    className="relative text-white font-bold cursor-pointer text-base lg:text-lg px-6 py-3 rounded-lg transition-all duration-300 border-2 border-primary bg-gradient-to-r from-primary via-blue-600 to-indigo-600 hover:from-white hover:via-blue-50 hover:to-indigo-50 hover:text-primary hover:shadow-2xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary/50 focus:ring-offset-2 active:scale-95 overflow-hidden group"
                     aria-label="Nhận tài liệu miễn phí"
                   >
-                    Nhận tài liệu miễn phí
+                    <span className="relative z-10">DÙNG THỬ MIỄN PHÍ</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
                   </button>
-
+                  <p className="text-xs lg:text-sm text-primary font-semibold animate-blink text-center lg:text-left flex items-center justify-center lg:justify-start gap-1.5">
+                    <span className="text-base lg:text-lg">👉</span>
+                    Dạy thử 1 lớp để thấy khác biệt
+                  </p>
                 </div>
               </div>
             </div>
           </div>
           <div className="mt-10 lg:mt-0 lg:col-span-5">
-            <div className="flex justify-center md:justify-center lg:justify-center">
-              <div className="w-full md:max-w-md lg:max-w-none">
+            <div className="flex justify-center md:justify-center lg:justify-center animate-fade-in-right" style={{ animationDelay: '0.3s' }}>
+              <div className="w-full md:max-w-md lg:max-w-none transform hover:scale-105 transition-transform duration-500">
                 <Image
                   src="/images/hero/mode.png"
                   alt="Thư viện số Blue Edu với hơn 5000 đề thi câu hỏi"
                   width={698}
                   height={652}
-                  className="w-full h-auto object-contain"
+                  className="w-full h-auto object-contain drop-shadow-2xl"
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 41.67vw"
                 />

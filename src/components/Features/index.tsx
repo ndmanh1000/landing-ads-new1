@@ -5,12 +5,19 @@ import { useMemo } from "react";
 import { useLogin } from "@/contexts/LoginContext";
 
 const Features = () => {
-  const { openLoginModal } = useLogin();
+
   const features = [
-    "Hơn 5.000 tài liệu đã được số hóa",
-    "Phân loại rõ ràng theo năng lực",
-    "Phù hợp nhiều trình độ học sinh",
-    "Có thể sử dụng cho: Soạn bài - Ra đề kiểm tra - Bài tập về nhà - Ôn luyện và đánh giá",
+    "Ban ngày vừa dạy, vừa quản lý lớp",
+
+    "Buổi tối phải chấm bài đến khuya",
+
+    "Cuối tuần tự tổng hợp điểm trên Excel",
+
+    "Soạn đề, chấm bài thủ công bằng MS",
+
+    "Dạy online, giao bài, nhắc học sinh qua Zalo, Zoom",
+
+    "Loạn vì nhiều công cụ, mất thời gian chuyển tab",
   ];
 
   // Generate random positions for particles once
@@ -25,7 +32,7 @@ const Features = () => {
 
   return (
     <section
-      className="pt-32 pb-20 relative"
+      className="pt-32 pb-20 relative overflow-hidden"
       id="product"
     >
       <div
@@ -34,49 +41,60 @@ const Features = () => {
           backgroundImage: "url('/images/logo/bg1.jpg')"
         }}
       ></div>
-      <div className="absolute inset-0 bg-white/65"></div>
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-sm"></div>
       <div className="container relative z-10">
-        <div className="bg-Lightsuccess bg-[url('/images/logo/bg-lines.png')] bg-no-repeat bg-contain bg-right-bottom rounded-2xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-4 lg:space-x-1 py-8 md:py-10 lg:py-11 px-8 md:px-12 lg:px-16 items-stretch">
-            <div className="md:col-span-1 lg:col-span-6 flex justify-center items-stretch h-full">
-              <div className="w-full max-w-md md:max-w-lg lg:max-w-none h-full flex items-center justify-center">
-                <div className="w-full h-full flex items-center justify-center">
-                  <img src="/images/logo/tap2.png" alt="tap2" className="w-full h-full object-contain" />
-                </div>
+        <div className="bg-Lightsuccess bg-[url('/images/logo/bg-lines.png')] bg-no-repeat bg-contain bg-right-bottom rounded-3xl shadow-2xl border border-green-100 overflow-hidden">
+          <div className="flex flex-col gap-8 md:gap-10 lg:gap-12 py-10 md:py-12 lg:py-16 px-6 md:px-10 lg:px-20">
+            {/* Header Section - Title & Highlight */}
+            <div className="flex flex-col gap-4 md:gap-6 text-center animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+              <h1 className="text-gray-900 text-2xl md:text-3xl lg:text-4xl font-extrabold leading-tight">
+                <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                  1 Ngày Thầy/Cô tự xoay xở với... trăm công nghìn việc
+                </span>
+              </h1>
+              <p className="text-lg md:text-xl lg:text-2xl text-green-600 font-semibold leading-relaxed max-w-3xl mx-auto">
+                Câu hỏi đã được sắp xếp & lưu trữ sẵn, Thầy/Cô không cần nhập lại từ đầu
+              </p>
+            </div>
+
+            {/* Image Section - Centered */}
+            <div className="flex justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <div className="w-full max-w-2xl lg:max-w-3xl flex items-center justify-center transform hover:scale-105 transition-transform duration-500">
+                <img
+                  src="/images/logo/tap2.png"
+                  alt="tap2"
+                  className="w-full h-full object-contain drop-shadow-2xl"
+                />
               </div>
             </div>
-            <div className="md:col-span-1 lg:col-span-6 flex flex-col gap-7 md:pl-8 lg:pl-24 mt-10 md:mt-0 lg:mt-0 justify-center h-full min-h-[400px] md:min-h-[500px]">
-              <h1 className="text-midnight_text  text-center lg:text-start! lg:leading-14 text-3xl md:text-xl leading-16">
-                THƯ VIỆN 5000 CÂU HỎI GỒM NHỮNG GÌ?
-              </h1>
-              <p className=" md:max-w-md flex-wrap text-2xl md:text-xl text-green-500">Câu hỏi đã được sắp xếp & lưu trữ sẵn, Thầy/Cô không cần nhập lại từ đầu</p>
-              <ul className="flex flex-col gap-3">
+
+            {/* Features Grid - 2 Columns */}
+            <div className="animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 lg:gap-6">
                 {features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3">
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 lg:gap-4 group bg-white/60 hover:bg-white/80 rounded-xl p-4 lg:p-5 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-green-100"
+                    style={{ animationDelay: `${0.6 + index * 0.1}s` }}
+                  >
                     <Icon
                       icon="mdi:check-circle"
-                      className="text-green-600 text-xl lg:text-2xl flex-shrink-0 mt-0.5"
+                      className="text-green-600 text-xl lg:text-2xl flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300"
                     />
-                    <span className="text-base lg:text-lg text-gray-700 leading-relaxed">
+                    <span className="text-base lg:text-lg text-gray-800 leading-relaxed font-medium group-hover:text-gray-900 transition-colors duration-300">
                       {feature}
                     </span>
                   </li>
                 ))}
               </ul>
+            </div>
 
-              <div className="flex flex-col items-center lg:items-start gap-2">
-                <div>
-                  <button
-                    onClick={openLoginModal}
-                    className="bg-yellow-400 cursor-pointer hover:bg-yellow-500 text-black font-bold text-base lg:text-lg p-2 rounded-lg transition duration-300 "
-                  >
-                    Nhận tài liệu miễn phí
-                  </button>
-                </div>
-                <p className="text-sm lg:text-base text-yellow-600 dark:text-yellow-400 font-bold text-center lg:text-left animate-blink">
-                  Dùng ngay sau 5s - Không cần cài đặt
-                </p>
-              </div>
+            {/* Bottom Text */}
+            <div className="flex flex-col items-center gap-2 mt-4 animate-fade-in-up" style={{ animationDelay: '1s' }}>
+              <p className="text-sm md:text-base lg:text-lg text-gray-700 font-medium bg-green-50/80 px-4 py-3 rounded-lg border border-green-200 inline-flex items-center gap-2 shadow-sm">
+                <span className="text-lg">👉</span>
+                Blue Edu được xây dựng dựa trên nhu cầu thực tế của Giáo viên
+              </p>
             </div>
           </div>
         </div>

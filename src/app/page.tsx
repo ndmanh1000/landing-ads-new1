@@ -45,10 +45,13 @@ export default function Home() {
       <Hero />
       <Features />
       <Video />
-      <Brands />
-      {/* <AboutSectionOne /> */}
-      {/* <Story /> */}
+      <AboutSectionOne />
+      <Story />
       {/* <Media /> */}
+      <Brands />
+
+
+
       {/* <Pricing /> */}
       {/* <Testimonials /> */}
       {/* <Blog /> */}
