@@ -19,33 +19,19 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head>
         {/* Favicon */}
-        <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico" />
+        <link type="image/x-icon" href="/images/favicon.ico" rel="canonical" />
+        <link type="image/png" sizes="32x32" href="/images/favicon.ico" rel="canonical" />
+        <link sizes="180x180" href="/images/favicon.ico" rel="canonical" />
 
         {/* Primary Meta Tags */}
-        <title>Blue Edu - LMS gọn nhẹ + AI siêu tốc</title>
-        <meta name="title" content="Blue Edu - LMS gọn nhẹ + AI siêu tốc" />
-        <meta name="description" content="Blue Edu - LMS gọn nhẹ + AI siêu tốc" />
-        <meta name="image" content="/images/logo/Thumbnail.jpeg" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Blue Edu" />
-        <meta property="og:title" content="Blue Edu - LMS gọn nhẹ + AI siêu tốc" />
-        <meta property="og:description" content="Blue Edu - LMS gọn nhẹ + AI siêu tốc" />
-        <meta property="og:image" content="/images/logo/Thumbnail.jpeg" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Blue Edu - LMS gọn nhẹ + AI siêu tốc" />
+        <title><h1>Blue Edu</h1></title>
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Blue Edu - LMS gọn nhẹ + AI siêu tốc" />
-        <meta name="twitter:description" content="Blue Edu - LMS gọn nhẹ + AI siêu tốc" />
+        <meta name="twitter:title" content="Blue Edu" />
+        <meta name="twitter:description" content="Blue Edu" />
         <meta name="twitter:image" content="/images/logo/Thumbnail.jpeg" />
-        <meta name="twitter:image:alt" content="Blue Edu - LMS gọn nhẹ + AI siêu tốc" />
+        <meta name="twitter:image:alt" content="Blue Edu" />
         <meta name="google-site-verification" content="D7k4LgS55FY2Fs9HI_4Vn2aWzZYECQuNN1w-hB89pDU" />
       </head>
 

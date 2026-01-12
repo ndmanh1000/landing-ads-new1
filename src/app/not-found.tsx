@@ -33,9 +33,9 @@ const NotFound = () => {
               <div className="mx-auto max-w-[600px] text-center animate-fade-in-up">
                 {/* 404 Number with Animation */}
                 <div className="mb-8">
-                  <h1 className="text-9xl font-extrabold leading-none text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 animate-shimmer bg-[length:200%_auto] sm:text-[150px]">
+                  <p className="text-9xl font-extrabold leading-none text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 animate-shimmer bg-[length:200%_auto] sm:text-[150px]">
                     404
-                  </h1>
+                  </p>
                 </div>
 
                 {/* Error Icon */}

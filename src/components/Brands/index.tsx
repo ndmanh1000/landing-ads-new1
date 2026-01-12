@@ -57,7 +57,7 @@ const Brands = () => {
 
       <div className="container px-4 relative z-10">
         <p className="text-center text-2xl md:text-2xl uppercase  ">
-          Hướng dẫn Đăng ký để nhận & lưu trữ thư viện miễn phí.
+          Tặng thư viện số +5.000 đề thi câu hỏi chuẩn BGD
         </p>
 
         {/* Content Grid */}
@@ -68,7 +68,7 @@ const Brands = () => {
               <div className="flex justify-center items-center">
                 <div className="relative w-full aspect-square rounded-xl border-2 border-gray-200 p-4 bg-white">
                   <Image
-                    src="/images/logo/tap1.jpeg"
+                    src="/images/hero/47.jpg"
                     alt="Blue Edu"
                     fill
                     className="object-cover rounded-lg"

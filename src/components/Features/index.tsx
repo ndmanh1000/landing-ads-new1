@@ -52,9 +52,7 @@ const Features = () => {
                   1 Ngày Thầy/Cô tự xoay xở với... trăm công nghìn việc
                 </span>
               </p>
-              <p className="text-lg md:text-lg text-green-600 font-semibold leading-relaxed max-w-3xl mx-auto">
-                Câu hỏi đã được sắp xếp & lưu trữ sẵn, Thầy/Cô không cần nhập lại từ đầu
-              </p>
+
             </div>
 
             {/* Image Section - Centered */}

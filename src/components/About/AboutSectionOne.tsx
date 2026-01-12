@@ -22,12 +22,7 @@ const AboutSectionOne = () => {
       title: "Không cần IT hỗ trợ",
 
     },
-    {
-      id: 4,
-      image: "/images/logo/tap1.jpeg",
-      title: "Giáo viên chỉ cần dạy – việc còn lại để Blue Edu lo",
 
-    },
   ];
 
   return (
@@ -46,11 +41,12 @@ const AboutSectionOne = () => {
               TẠI SAO GIÁO VIÊN DẠY THÊM PHÙ HỢP VỚI BLUE EDU?
             </span>
           </p>
+          <p>Giáo viên chỉ cần dạy – việc còn lại để Blue Edu lo</p>
         </div>
 
         {/* Cards Grid */}
         <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 md:gap-4 lg:gap-6">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-4 lg:gap-6">
             {cards.map((card, index) => (
               <div
                 key={card.id}
