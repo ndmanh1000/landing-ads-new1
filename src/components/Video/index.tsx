@@ -125,7 +125,7 @@ export default function Video() {
             <div className="w-full lg:w-1/3">
               <div className="relative h-96 w-full overflow-hidden rounded-lg lg:h-full">
                 <Image
-                  src="/images/logo/tap1.jpeg"
+                  src="/images/hero/jun1.jpeg"
                   alt="Giáo viên trong lớp học"
                   fill
                   className="object-cover object-center"

@@ -1,26 +1,26 @@
 "use client";
 
-import Image from "next/image";
+import { Icon } from "@iconify/react";
 
 const AboutSectionOne = () => {
   const cards = [
     {
       id: 1,
-      image: "/images/logo/tap1.jpeg",
+      icon: "mdi:file-document-outline",
       title: "Không rườm rà hành chính",
-
+      gradient: "from-blue-400 to-blue-600",
     },
     {
       id: 2,
-      image: "/images/logo/tap2.png",
+      icon: "mdi:cog-outline",
       title: "Không phức tạp quản trị",
-
+      gradient: "from-purple-400 to-purple-600",
     },
     {
       id: 3,
-      image: "/images/logo/tap1.jpeg",
+      icon: "mdi:laptop",
       title: "Không cần IT hỗ trợ",
-
+      gradient: "from-indigo-400 to-indigo-600",
     },
 
   ];
@@ -54,23 +54,20 @@ const AboutSectionOne = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="relative h-full rounded-xl border-2 border-gray-200 bg-gradient-to-br from-blue-50/50 to-purple-50/50 p-4 transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-lg md:p-5">
-                  {/* Image Container */}
-                  <div className="relative h-56 overflow-hidden rounded-lg md:h-64 lg:h-72">
-                    <Image
-                      src={card.image}
-                      alt={card.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  {/* Icon Container với Gradient Background */}
+                  <div className={`relative h-56 overflow-hidden rounded-lg md:h-64 lg:h-72 bg-gradient-to-br ${card.gradient} flex items-center justify-center transition-transform duration-500 group-hover:scale-105`}>
+                    <Icon
+                      icon={card.icon}
+                      className="text-white text-6xl md:text-7xl lg:text-8xl opacity-90"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                   </div>
 
-                  {/* Text Box Overlay - Chèn lên ảnh với chiều cao bằng nhau */}
+                  {/* Text Box - Giữ nguyên vị trí */}
                   <div className="relative -mt-10 mx-2 flex flex-col rounded-xl bg-white p-4 shadow-xl transition-all duration-300 group-hover:shadow-2xl md:mx-2 md:p-5 lg:p-6">
                     <h3 className="flex min-h-[3rem] items-center justify-center text-center text-sm font-bold leading-tight text-gray-900 md:min-h-[3.5rem] md:text-base lg:min-h-[4rem] lg:text-sm">
                       {card.title}
                     </h3>
-
                   </div>
                 </div>
               </div>

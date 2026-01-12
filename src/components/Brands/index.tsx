@@ -68,7 +68,7 @@ const Brands = () => {
               <div className="flex justify-center items-center">
                 <div className="relative w-full aspect-square rounded-xl border-2 border-gray-200 p-4 bg-white">
                   <Image
-                    src="/images/hero/47.jpg"
+                    src="/images/hero/47.webp"
                     alt="Blue Edu"
                     fill
                     className="object-cover rounded-lg"

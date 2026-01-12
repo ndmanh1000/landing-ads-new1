@@ -61,7 +61,7 @@ const Features = () => {
                 <img
                   src="/images/logo/tap2.png"
                   alt="tap2"
-                  className="w-full h-full object-contain drop-shadow-2xl"
+                  className="w-full h-auto drop-shadow-2xl"
                 />
               </div>
             </div>
