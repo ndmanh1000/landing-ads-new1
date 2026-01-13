@@ -6,58 +6,52 @@ export default function Video() {
   const items = [
     {
       icon: (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 8L32 16L24 24L16 16L24 8Z" fill="#93C5FD" />
-          <path d="M40 16L32 24L40 32L48 24L40 16Z" fill="#93C5FD" />
-          <path d="M8 16L16 24L8 32L0 24L8 16Z" fill="#93C5FD" />
-          <path d="M24 24L32 32L24 40L16 32L24 24Z" fill="#93C5FD" />
-          <path d="M24 8L32 16L24 24L16 16L24 8Z" stroke="#60A5FA" strokeWidth="2" fill="none" />
-          <path d="M24 24L32 32L24 40L16 32L24 24Z" stroke="#60A5FA" strokeWidth="2" fill="none" />
-        </svg>
+        <span className="text-2xl">🚀</span>
       ),
-      text: "Giáo viên dạy thêm ngoài giờ hoặc lớp nhỏ",
+
+      text: "Soạn & Tạo đề 100% bằng AI",
       bgColor: "bg-white",
       iconBg: "bg-blue-50",
+      subItems: [
+        "AI gợi ý câu hỏi theo trình độ học sinh Yếu-Khá-Giỏi",
+        "Số hóa mọi cấu trúc đề phức tạp nhất chỉ mất 5p",
+      ],
     },
     {
       icon: (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="12" y="32" width="8" height="8" fill="#FCA5A5" rx="2" />
-          <rect x="20" y="22" width="8" height="18" fill="#F87171" rx="2" />
-          <rect x="28" y="14" width="8" height="26" fill="#EF4444" rx="2" />
-        </svg>
+        <span className="text-2xl">🧠</span>
       ),
       text: "Giáo viên dạy tại trung tâm",
       bgColor: "bg-white",
       iconBg: "bg-red-50",
+      subItems: [
+        "Bài làm được chấm ngay sau khi học sinh nộp",
+        "Tự động chỉ ra lỗi sai – điểm yếu của từng học sinh",
+      ],
     },
     {
       icon: (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="20" r="12" fill="#E9D5FF" />
-          <circle cx="24" cy="20" r="8" fill="#C084FC" />
-          <path d="M24 28V36" stroke="#A855F7" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M24 36H28" stroke="#A855F7" strokeWidth="2.5" strokeLinecap="round" />
-        </svg>
+        <span className="text-2xl">📚</span>
       ),
       text: "Thầy/Cô muốn có nguồn câu hỏi ổn định để dùng lâu dài",
       bgColor: "bg-white",
       iconBg: "bg-purple-50",
+      subItems: [
+        "Lưu trữ toàn bộ đề và Tái sử dụng cho nhiều lớp",
+        "Không cần nhập lại, không lo thất lạc file",
+      ],
     },
     {
       icon: (
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="24" r="8" fill="#DBEAFE" />
-          <circle cx="24" cy="24" r="3" fill="#3B82F6" />
-          <circle cx="8" cy="24" r="4" fill="#93C5FD" />
-          <circle cx="40" cy="24" r="4" fill="#93C5FD" />
-          <circle cx="24" cy="8" r="4" fill="#93C5FD" />
-          <circle cx="24" cy="40" r="4" fill="#93C5FD" />
-        </svg>
+        <span className="text-2xl">👩‍🏫</span>
       ),
       text: "Thầy/Cô muốn tiết kiệm thời gian soạn bài, ra đề",
       bgColor: "bg-white",
       iconBg: "bg-blue-50",
+      subItems: [
+        "Theo dõi bài tập, kết quả, tiến độ từng học sinh",
+        "Quản lý nhiều lớp trong một giao diện duy nhất",
+      ],
     },
   ];
 
@@ -87,9 +81,10 @@ export default function Video() {
         <div className="container relative z-10">
           {/* Section Title */}
           <div className="mb-10 text-center md:mb-12 lg:mb-16">
-            <h2 className=" font-bold leading-tight text-blue-900 dark:text-white sm:text-3xl text-2xl md:text-3xl">
-              Thư viện Blue Edu phù hợp với ai?
-            </h2>
+            <p className=" font-bold leading-tight text-blue-900 dark:text-white sm:text-3xl text-2xl md:text-2xl">
+              EDU GIẢI QUYẾT NHƯ THẾ NÀO?
+            </p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">Blue Edu cho Giáo viên – Trợ thủ AI hỗ trợ toàn diện dạy và học</p>
           </div>
 
           {/* Content Grid */}
@@ -105,9 +100,22 @@ export default function Video() {
                     <div className={`${item.iconBg} dark:bg-gray-700 mb-4 flex items-center justify-center rounded-lg p-3`}>
                       {item.icon}
                     </div>
-                    <p className="text-base font-medium leading-relaxed text-gray-800 dark:text-white sm:text-lg">
+                    <p className="text-base font-medium leading-relaxed text-gray-800 dark:text-white sm:text-lg mb-3">
                       {item.text}
                     </p>
+                    {item.subItems && (
+                      <div className="w-full mt-2 space-y-2 text-left">
+                        {item.subItems.map((subItem, subIndex) => (
+                          <div
+                            key={subIndex}
+                            className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300"
+                          >
+                            <span className="text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0">•</span>
+                            <span className="leading-relaxed">{subItem}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -117,7 +125,7 @@ export default function Video() {
             <div className="w-full lg:w-1/3">
               <div className="relative h-96 w-full overflow-hidden rounded-lg lg:h-full">
                 <Image
-                  src="/images/logo/tap1.jpeg"
+                  src="/images/hero/jun1.jpeg"
                   alt="Giáo viên trong lớp học"
                   fill
                   className="object-cover object-center"

@@ -62,9 +62,9 @@ const Header = () => {
             <div className="px-4">
               <button
                 onClick={openLoginModal}
-                className="rounded-md bg-primary cursor-pointer px-6 py-2.5 text-base font-medium text-white transition-all duration-300 hover:bg-primary/90"
+                className="rounded-md bg-primary cursor-pointer md:px-6 md:py-2.5 p-2 text-base font-medium text-white transition-all duration-300 hover:bg-primary/90"
               >
-                Nhận tài liệu
+                Dùng thử miễn phí
               </button>
             </div>
           </div>

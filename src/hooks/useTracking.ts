@@ -15,8 +15,6 @@ export function useTracking() {
 
     // Track đăng ký/đăng nhập
     const trackAuth = (type: "signup" | "login", location: string) => {
-        if (typeof window === "undefined") return;
-
         posthog.capture("landing_auth_attempt", {
             source: ANALYTICS_SOURCE,
             landing_page: LANDING_PAGE_ID,
