@@ -1,10 +1,12 @@
 import posthog from "posthog-js";
 
 // PostHog configuration for landing page
-// Uses same project as main app (Frontend) for cross-domain tracking
+// Domain: giaovien.blueedu.vn
+// ⚠️ ĐỔI TÊN LANDING TẠI ĐÂY
+export const LANDING_PAGE_ID = "giaovien";
 
-const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY;
-const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com";
+const POSTHOG_KEY = "phc_IaryvRMNLhjA5zCWKs2y9fdH1oYLXzGw6SByBFwQC15";
+const POSTHOG_HOST = "https://us.i.posthog.com";
 
 // Source identifier to distinguish landing from main app in analytics
 export const ANALYTICS_SOURCE = "landing" as const;
@@ -25,8 +27,7 @@ export function initPostHog() {
 
   posthog.init(POSTHOG_KEY, {
     api_host: POSTHOG_HOST,
-    // Disable auto pageview - we capture manually with source property
-    capture_pageview: false,
+    capture_pageview: true,
     capture_pageleave: true,
     // Error tracking
     capture_exceptions: true,
@@ -36,18 +37,15 @@ export function initPostHog() {
     persistence: 'localStorage+cookie',
     // IMPORTANT: Use loaded callback to ensure SDK is ready before capturing
     loaded: (posthogInstance) => {
-      // Register super properties FIRST
+      // Register super properties FIRST - Gắn properties cho mọi event
       posthogInstance.register({
         source: ANALYTICS_SOURCE,
+        landing_page: LANDING_PAGE_ID,
         domain: window.location.hostname,
-      });
-      // Then capture pageview with source attached
-      posthogInstance.capture('$pageview', {
-        source: ANALYTICS_SOURCE, // Also pass explicitly to be safe
       });
 
       if (process.env.NODE_ENV === 'development') {
-        console.log('[PostHog] Initialized with source:', ANALYTICS_SOURCE);
+        console.log('[PostHog] Initialized with source:', ANALYTICS_SOURCE, 'landing_page:', LANDING_PAGE_ID);
       }
     },
   });
@@ -72,6 +70,8 @@ export function trackEvent(eventName: string, properties?: Record<string, unknow
  */
 export function trackCTAClick(ctaName: string, location: string) {
   trackEvent("landing_cta_click", {
+    source: ANALYTICS_SOURCE,
+    landing_page: LANDING_PAGE_ID,
     cta_name: ctaName,
     location,
     page_url: window.location.pathname,
