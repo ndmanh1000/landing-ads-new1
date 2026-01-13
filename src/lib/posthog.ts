@@ -3,11 +3,14 @@ import posthog from "posthog-js";
 // PostHog configuration for landing page
 // Uses same project as main app (Frontend) for cross-domain tracking
 
-const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY;
+const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY || "phc_IaryvRMNLhjA5zCWKs2y9fdH1oYLXzGw6SByBFwQC15";
 const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com";
 
 // Source identifier to distinguish landing from main app in analytics
 export const ANALYTICS_SOURCE = "landing" as const;
+
+// Landing page identifier - ĐỔI TÊN LANDING TẠI ĐÂY
+export const LANDING_PAGE_ID = "hoclieu";
 
 let isInitialized = false;
 
@@ -39,15 +42,17 @@ export function initPostHog() {
       // Register super properties FIRST
       posthogInstance.register({
         source: ANALYTICS_SOURCE,
+        landing_page: LANDING_PAGE_ID,
         domain: window.location.hostname,
       });
       // Then capture pageview with source attached
       posthogInstance.capture('$pageview', {
         source: ANALYTICS_SOURCE, // Also pass explicitly to be safe
+        landing_page: LANDING_PAGE_ID,
       });
 
       if (process.env.NODE_ENV === 'development') {
-        console.log('[PostHog] Initialized with source:', ANALYTICS_SOURCE);
+        console.log('[PostHog] Initialized with source:', ANALYTICS_SOURCE, 'landing_page:', LANDING_PAGE_ID);
       }
     },
   });
@@ -63,6 +68,7 @@ export function trackEvent(eventName: string, properties?: Record<string, unknow
 
   posthog.capture(eventName, {
     source: ANALYTICS_SOURCE,
+    landing_page: LANDING_PAGE_ID,
     ...properties,
   });
 }
@@ -108,6 +114,7 @@ export function trackAuthSuccess(method: "google" | "email", isNewUser: boolean)
       // Use capture with callback to ensure event is queued
       posthog.capture(eventName, {
         source: ANALYTICS_SOURCE,
+        landing_page: LANDING_PAGE_ID,
         method,
       });
 

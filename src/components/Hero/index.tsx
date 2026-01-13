@@ -63,31 +63,23 @@ const Hero = () => {
               <h1 className="text-2xl md:text-2xl leading-16 text-midnight_text text-center lg:text-start mx-auto lg:mx-0 pt-5">
                 MIỄN PHÍ THƯ VIỆN SỐ HƠN +5.000 ĐỀ THI CÂU HỎI
               </h1>
-              <p className="text-black/75 text-lg font-normal text-center lg:text-start max-w-2xl mx-auto lg:mx-0">
-                Dành riêng cho giáo viên dạy cá nhân, dạy thêm hoặc tại trung
-                tâm
-              </p>
+
               <div className="text-center lg:text-start max-w-2xl mx-auto lg:mx-0 mt-2">
                 <div className="flex items-stretch gap-2 lg:gap-4 justify-center lg:justify-start overflow-hidden">
                   <div className="flex flex-col flex-shrink-0 justify-center">
                     <span className="text-black text-sm lg:text-xl  font-bold whitespace-nowrap">
-                      TIẾT KIỆM
+                      TÀI LIỆU SỐ HÓA CHUẨN BGD
                     </span>
-                    <span className="text-black text-sm lg:text-xl  font-bold whitespace-nowrap">
-                      THỜI GIAN
-                    </span>
+                    {/* <span className="text-black text-sm lg:text-xl  font-bold whitespace-nowrap">
+                      CHUẨN BGD
+                    </span> */}
                   </div>
-                  <span className="text-primary text-2xl lg:text-3xl font-bold flex-shrink-0 flex items-center">
+                  {/* <span className="text-primary text-2xl lg:text-3xl font-bold flex-shrink-0 flex items-center">
                     80%
-                  </span>
+                  </span> */}
                   <div className="mx-1 lg:mx-2 w-px bg-black/40 flex-shrink-0"></div>
                   <div className="flex flex-col flex-shrink-0 min-w-0 justify-center">
-                    <span className="text-primary text-sm lg:text-2xl  font-bold whitespace-nowrap">
-                      56 tài khoản free
-                    </span>
-                    <span className="text-black text-xs lg:text-lg font-medium whitespace-nowrap">
-                      cho Thầy/Cô trải nghiệm
-                    </span>
+                    <p className="text-black text-sm lg:text-xl  font-bold whitespace-nowrap uppercase">Dành cho các khối lớp từ 1-12</p>
                   </div>
                 </div>
               </div>
