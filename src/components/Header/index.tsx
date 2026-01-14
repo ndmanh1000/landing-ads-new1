@@ -62,9 +62,9 @@ const Header = () => {
             <div className="px-4 animate-breathe">
               <button
                 onClick={openLoginModal}
-                className="rounded-full bg-[#ffc600] hover:bg-primary/90 uppercase cursor-pointer md:px-6 md:py-2.5 p-2 text-sm font-bold text-white transition-all duration-300 "
+                className="rounded-full bg-[#ffc600] hover:bg-primary/90 uppercase cursor-pointer md:px-6 md:py-2.5 p-2 text-[11px] font-bold text-white transition-all duration-300 "
               >
-                Dùng thử miễn phí
+                Nhận tài liệu miễn phí
               </button>
             </div>
           </div>

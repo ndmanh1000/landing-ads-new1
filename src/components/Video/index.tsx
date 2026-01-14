@@ -90,7 +90,7 @@ export default function Video() {
             {/* Main Image Container */}
             <div className="relative z-10 w-full h-full max-h-[500px] rounded-[40px] overflow-hidden shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+                src="/images/hero/thuv1.jpg"
                 alt="Digital Growth Team"
                 className="w-full h-full object-cover"
               />
