@@ -66,7 +66,8 @@ const Brands = () => {
           {/* Left Column: Steps */}
           <div className="space-y-8">
             <ListItem>
-              Bước 1: Thầy/cô ấn vào nút <span className="font-bold">"Nhận tài liệu miễn phí"</span>
+              {/* Đã sửa lỗi dấu " ở dòng dưới */}
+              Bước 1: Thầy/cô ấn vào nút <span className="font-bold">&quot;Nhận tài liệu miễn phí&quot;</span>
             </ListItem>
 
             <ListItem>
@@ -74,7 +75,8 @@ const Brands = () => {
             </ListItem>
 
             <ListItem>
-              Bước 3: Ấn vào mục <span className="font-bold">"Học liệu"</span> bên phải và bắt đầu sử dụng miễn phí
+              {/* Đã sửa lỗi dấu " ở dòng dưới */}
+              Bước 3: Ấn vào mục <span className="font-bold">&quot;Học liệu&quot;</span> bên phải và bắt đầu sử dụng miễn phí
             </ListItem>
           </div>
 
