@@ -98,7 +98,7 @@ const Brands = () => {
                 onClick={openLoginModal}
                 className="rounded-full bg-[#d3f901] uppercase cursor-pointer md:px-6 md:py-2.5 p-2 text-base font-bold text-black transition-all duration-300 hover:bg-primary/90"
               >
-                Dùng thử miễn phí
+                Dùng ngay không cần cài đặt
               </button>
             </div>
           </div>

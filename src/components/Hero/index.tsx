@@ -140,7 +140,7 @@ const Hero = () => {
                 >
                   <button
                     onClick={openLoginModal}
-                    className="text-black font-bold bg-[#d3f901] uppercase cursor-pointer text-base lg:text-xl p-2 rounded-full animate-breathe transition-all duration-300 border border-primary hover:bg-transparent hover:cursor-pointer hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:scale-95"
+                    className="text-black font-bold bg-[#d3f901] uppercase cursor-pointer text-base lg:text-xl px-4 py-3 rounded-full animate-breathe transition-all duration-300 border border-primary hover:bg-transparent hover:cursor-pointer hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:scale-95"
                     aria-label="Nhận tài liệu miễn phí"
                   >
                     Nhận tài liệu miễn phí
