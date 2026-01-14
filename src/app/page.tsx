@@ -42,14 +42,17 @@ export default function Home() {
   return (
     <>
       <ScrollUp />
-      <Hero />
+      <div className="mt-16 md:mt-0">
+        <Hero />
+      </div>
+
       <Features />
       <Video />
-      <AboutSectionOne />
-      <Story />
+      {/* <AboutSectionOne /> */}
+      {/* <Story /> */}
 
       <Brands />
-      <Media />
+      {/* <Media /> */}
 
 
 

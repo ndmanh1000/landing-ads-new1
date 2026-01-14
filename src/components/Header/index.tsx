@@ -59,10 +59,10 @@ const Header = () => {
                 />
               </Link>
             </div>
-            <div className="px-4">
+            <div className="px-4 animate-breathe">
               <button
                 onClick={openLoginModal}
-                className="rounded-md bg-primary cursor-pointer md:px-6 md:py-2.5 p-2 text-base font-medium text-white transition-all duration-300 hover:bg-primary/90"
+                className="rounded-full bg-[#d3f901] uppercase cursor-pointer md:px-6 md:py-2.5 p-2 text-base font-bold text-black transition-all duration-300 hover:bg-primary/90"
               >
                 Dùng thử miễn phí
               </button>

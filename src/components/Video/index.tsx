@@ -1,142 +1,104 @@
 "use client";
 
-import Image from "next/image";
+import { Rocket, GraduationCap, MonitorCheck, Briefcase } from 'lucide-react';
 
 export default function Video() {
-  const items = [
+  const cards = [
     {
-      icon: (
-        <span className="text-2xl">🚀</span>
-      ),
-
-      text: "Soạn & Tạo đề 100% bằng AI",
-      bgColor: "bg-white",
-      iconBg: "bg-blue-50",
-      subItems: [
-        "AI gợi ý câu hỏi theo trình độ học sinh Yếu-Khá-Giỏi",
-        "Số hóa mọi cấu trúc đề phức tạp nhất chỉ mất 5p",
-      ],
+      id: 1,
+      icon: Rocket,
+      title: "Giáo viên muốn tiết kiệm thời gian soạn bài và ra đề mỗi ngày",
+      desc: "Cần lộ trình học bài bản, học từ cơ bản đến nâng cao.",
+      isDark: true, // Card này có màu tối
     },
     {
-      icon: (
-        <span className="text-2xl">🧠</span>
-      ),
-      text: "Giáo viên dạy tại trung tâm",
-      bgColor: "bg-white",
-      iconBg: "bg-red-50",
-      subItems: [
-        "Bài làm được chấm ngay sau khi học sinh nộp",
-        "Tự động chỉ ra lỗi sai – điểm yếu của từng học sinh",
-      ],
+      id: 2,
+      icon: GraduationCap,
+      title: "Giáo viên cần nguồn câu hỏi ổn định để dùng lâu dài cho nhiều lớp",
+      desc: "Muốn thực hành, ứng dụng kiến thức vào công việc với sự hướng dẫn từ giảng viên.",
+      isDark: false,
     },
     {
-      icon: (
-        <span className="text-2xl">📚</span>
-      ),
-      text: "Thầy/Cô muốn có nguồn câu hỏi ổn định để dùng lâu dài",
-      bgColor: "bg-white",
-      iconBg: "bg-purple-50",
-      subItems: [
-        "Lưu trữ toàn bộ đề và Tái sử dụng cho nhiều lớp",
-        "Không cần nhập lại, không lo thất lạc file",
-      ],
+      id: 3,
+      icon: MonitorCheck,
+      title: "Giáo viên muốn dạy hiệu quả hơn ở lớp nhỏ, lớp dạy thêm hoặc online",
+      desc: "Cập nhật xu hướng, tối ưu kỹ năng để thăng tiến sự nghiệp.",
+      isDark: false,
     },
     {
-      icon: (
-        <span className="text-2xl">👩‍🏫</span>
-      ),
-      text: "Thầy/Cô muốn tiết kiệm thời gian soạn bài, ra đề",
-      bgColor: "bg-white",
-      iconBg: "bg-blue-50",
-      subItems: [
-        "Theo dõi bài tập, kết quả, tiến độ từng học sinh",
-        "Quản lý nhiều lớp trong một giao diện duy nhất",
-      ],
+      id: 4,
+      icon: Briefcase,
+      title: "Giáo viên quản lý đề và bài giảng gọn gàng, không lo thất lạc",
+      desc: "Tự làm, tự tối ưu thay vì thuê ngoài, mở rộng dịch vụ & tăng thu nhập.",
+      isDark: false,
     },
   ];
 
   return (
-    <>
-      <section id="video" className="relative overflow-hidden py-12 dark:from-gray-dark dark:via-gray-900 dark:to-gray-dark md:py-16 lg:py-20">
-        {/* Animated Background with Blur and Colors */}
-        <div className="absolute inset-0 backdrop-blur-md">
-          {/* Base Gradient Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-purple-50/80 to-cyan-100/60 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+    <section className="bg-gray-50 py-16 px-4 md:px-8 font-sans overflow-hidden">
+      <div className="max-w-7xl mx-auto">
 
-          {/* Animated Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-200/40 via-purple-200/30 to-cyan-200/40 animate-gradient-xy opacity-80"></div>
+        {/* Header Title */}
+        <h2 className="text-center text-3xl md:text-4xl font-extrabold mb-12 uppercase">
+          Thư viện Blue Edu phù hợp với ai?
+        </h2>
 
-          {/* Floating Animated Shapes - Large */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400/25 rounded-full blur-3xl animate-float-slow"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-400/25 rounded-full blur-3xl animate-float-slow-reverse"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-400/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="flex flex-col lg:flex-row gap-8 items-stretch">
 
-          {/* Additional Animated Particles - Medium */}
-          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-300/35 rounded-full blur-2xl animate-float-delayed"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-300/30 rounded-full blur-2xl animate-float-delayed" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-cyan-300/35 rounded-full blur-2xl animate-float-delayed" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute bottom-1/4 left-1/3 w-28 h-28 bg-indigo-300/30 rounded-full blur-2xl animate-float-delayed" style={{ animationDelay: '1.5s' }}></div>
-        </div>
+          {/* Left Column: Grid of Cards */}
+          <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {cards.map((card) => (
+              <div
+                key={card.id}
+                className={`flex flex-col items-center text-center p-8 rounded-2xl shadow-sm transition-transform hover:-translate-y-1 duration-300 ${card.isDark
+                  ? 'bg-[#1a2e35] text-white'
+                  : 'bg-gray-200 text-slate-800'
+                  }`}
+              >
+                {/* Icon */}
+                <div className="mb-4">
+                  <card.icon
+                    size={48}
+                    strokeWidth={1.5}
+                    className={card.isDark ? 'text-white' : 'text-slate-800'}
+                  />
+                </div>
 
-        <div className="container relative z-10">
-          {/* Section Title */}
-          <div className="mb-10 text-center md:mb-12 lg:mb-16">
-            <p className=" font-bold leading-tight text-blue-900 dark:text-white sm:text-3xl text-2xl md:text-2xl">
-              EDU GIẢI QUYẾT NHƯ THẾ NÀO?
-            </p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">Blue Edu cho Giáo viên – Trợ thủ AI hỗ trợ toàn diện dạy và học</p>
+                {/* Title */}
+                <h3 className={`text-lg font-bold mb-3 ${card.isDark ? 'text-[#D6EB00]' : 'text-slate-900'
+                  }`}>
+                  {card.title}
+                </h3>
+
+                {/* Description */}
+                {/* <p className={`text-sm leading-relaxed ${card.isDark ? 'text-gray-300' : 'text-slate-600'
+                  }`}>
+                  {card.desc}
+                </p> */}
+              </div>
+            ))}
           </div>
 
-          {/* Content Grid */}
-          <div className="flex flex-col lg:flex-row lg:items-stretch lg:gap-8 xl:gap-12">
-            {/* Left Side - Cards Grid */}
-            <div className="mb-8 w-full lg:mb-0 lg:w-2/3">
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 h-full">
-                {items.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`${item.bgColor} dark:bg-gray-800 rounded-lg p-6 shadow-sm transition-all duration-300 hover:shadow-md flex flex-col items-center justify-center text-center`}
-                  >
-                    <div className={`${item.iconBg} dark:bg-gray-700 mb-4 flex items-center justify-center rounded-lg p-3`}>
-                      {item.icon}
-                    </div>
-                    <p className="text-base font-medium leading-relaxed text-gray-800 dark:text-white sm:text-lg mb-3">
-                      {item.text}
-                    </p>
-                    {item.subItems && (
-                      <div className="w-full mt-2 space-y-2 text-left">
-                        {item.subItems.map((subItem, subIndex) => (
-                          <div
-                            key={subIndex}
-                            className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300"
-                          >
-                            <span className="text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0">•</span>
-                            <span className="leading-relaxed">{subItem}</span>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
+          {/* Right Column: Image with Decorations */}
+          <div className="w-full lg:w-1/2 relative flex items-center justify-center mt-8 lg:mt-0">
+            {/* Decorative Circle Top-Right (Lime Green) */}
+            <div className="absolute -top-10 -right-10 w-40 h-40 md:w-64 md:h-64 bg-[#D6EB00] rounded-full z-0 hidden md:block"></div>
 
-            {/* Right Side - Image */}
-            <div className="w-full lg:w-1/3">
-              <div className="relative h-96 w-full overflow-hidden rounded-lg lg:h-full">
-                <Image
-                  src="/images/hero/jun1.jpeg"
-                  alt="Giáo viên trong lớp học"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                  priority
-                />
-              </div>
+            {/* Decorative Semi-Circle Bottom-Left (Green) */}
+            <div className="absolute -bottom-6 left-0 md:left-10 w-24 h-24 md:w-40 md:h-40 bg-emerald-500 rounded-full z-0"></div>
+
+            {/* Main Image Container */}
+            <div className="relative z-10 w-full h-full max-h-[500px] rounded-[40px] overflow-hidden shadow-xl">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80"
+                alt="Digital Growth Team"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
+
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

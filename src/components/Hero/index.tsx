@@ -2,6 +2,12 @@
 
 import Image from "next/image";
 import { useLogin } from "@/contexts/LoginContext";
+import { MdOutlineDocumentScanner } from "react-icons/md";
+import { MdOutlineSupportAgent } from "react-icons/md";
+import { FaAward } from "react-icons/fa";
+
+
+
 
 const Hero = () => {
   const { openLoginModal } = useLogin();
@@ -11,22 +17,22 @@ const Hero = () => {
       {/* Animated Background with Blur and Colors */}
       <div className="absolute inset-0 backdrop-blur-md">
         {/* Base Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50/90 to-purple-50/70 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+        <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle, rgb(42, 60, 40), rgb(15, 33, 40))' }}></div>
 
         {/* Animated Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-200/40 via-indigo-200/30 to-purple-200/40 animate-gradient-xy opacity-70"></div>
+        <div className="absolute inset-0 animate-gradient-xy"></div>
 
         {/* Floating Animated Shapes - Large */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-300/30 rounded-full blur-3xl animate-float-slow"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-300/30 rounded-full blur-3xl animate-float-slow-reverse"></div>
-        <div className="absolute top-1/2 right-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-300/25 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 rounded-full animate-float-slow"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full animate-float-slow-reverse"></div>
+        <div className="absolute top-1/2 right-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full animate-pulse-slow"></div>
 
         {/* Additional Animated Particles - Medium */}
-        <div className="absolute top-32 right-20 w-40 h-40 bg-blue-200/40 rounded-full blur-2xl animate-float-delayed"></div>
-        <div className="absolute bottom-32 left-20 w-36 h-36 bg-purple-200/35 rounded-full blur-2xl animate-float-delayed" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/4 left-1/3 w-32 h-32 bg-indigo-200/40 rounded-full blur-2xl animate-float-delayed" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-1/3 right-1/3 w-28 h-28 bg-cyan-200/35 rounded-full blur-2xl animate-float-delayed" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute top-20 left-1/2 w-24 h-24 bg-blue-300/30 rounded-full blur-2xl animate-float-delayed" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-32 right-20 w-40 h-40 rounded-full animate-float-delayed"></div>
+        <div className="absolute bottom-32 left-20 w-36 h-36 rounded-full animate-float-delayed" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/4 left-1/3 w-32 h-32 rounded-full animate-float-delayed" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/3 right-1/3 w-28 h-28 rounded-full animate-float-delayed" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-20 left-1/2 w-24 h-24 rounded-full animate-float-delayed" style={{ animationDelay: '0.5s' }}></div>
       </div>
 
       <div className="container relative z-10">
@@ -59,16 +65,19 @@ const Hero = () => {
               loading="lazy"
               aria-hidden="true"
             />
+            {/* <div className="border-2 border-[#2f6e55] rounded-full p-4 text-white text-sm md:text-2xl w-full md:w-64">
+              Digital For Growth
+            </div> */}
             <div className="flex flex-col gap-5">
-              <h1 className="text-2xl md:text-2xl leading-16 text-midnight_text text-center lg:text-start mx-auto lg:mx-0 pt-5">
-                MIỄN PHÍ THƯ VIỆN SỐ HƠN +5.000 ĐỀ THI CÂU HỎI
+              <h1 className="text-2xl md:text-[50px] text-white uppercase leading-16 text-midnight_text text-center lg:text-start mx-auto lg:mx-0 pt-5">
+                Miễn phí thư viện số hơn +5.000 đề thi câu hỏi
               </h1>
 
               <div className="text-center lg:text-start max-w-2xl mx-auto lg:mx-0 mt-2">
-                <div className="flex items-stretch gap-2 lg:gap-4 justify-center lg:justify-start overflow-hidden">
-                  <div className="flex flex-col flex-shrink-0 justify-center">
-                    <span className="text-black text-sm lg:text-xl  font-bold whitespace-nowrap">
-                      TÀI LIỆU SỐ HÓA CHUẨN BGD
+                <div className="flex items-center gap-1.5 md:gap-2 lg:gap-4 justify-center lg:justify-start flex-wrap">
+                  <div className="flex flex-shrink-0 justify-center">
+                    <span className="text-xs md:text-sm lg:text-xl uppercase text-white font-medium whitespace-nowrap">
+                      Tài liệu số hóa chuẩn BGD
                     </span>
                     {/* <span className="text-black text-sm lg:text-xl  font-bold whitespace-nowrap">
                       CHUẨN BGD
@@ -77,9 +86,9 @@ const Hero = () => {
                   {/* <span className="text-primary text-2xl lg:text-3xl font-bold flex-shrink-0 flex items-center">
                     80%
                   </span> */}
-                  <div className="mx-1 lg:mx-2 w-px bg-black/40 flex-shrink-0"></div>
-                  <div className="flex flex-col flex-shrink-0 min-w-0 justify-center">
-                    <p className="text-black text-sm lg:text-xl  font-bold whitespace-nowrap uppercase">Dành cho các khối lớp từ 1-12</p>
+                  <div className="mx-0.5 md:mx-1 lg:mx-2 w-px h-4 bg-white flex-shrink-0"></div>
+                  <div className="flex flex-shrink-0 min-w-0 justify-center text-white">
+                    <p className="text-xs md:text-sm lg:text-xl font-medium text-white uppercase whitespace-nowrap">Dành cho các khối lớp từ 1-12</p>
                   </div>
                 </div>
               </div>
@@ -88,8 +97,11 @@ const Hero = () => {
                   {/* Card 1: Truy cập tài liệu độc quyền */}
                   <div className="bg-gray-100 border border-gray-300 rounded-lg p-2.5 lg:p-3 flex items-center justify-center flex-1 min-w-0 transition-all duration-300 hover:shadow-md hover:border-gray-400 hover:scale-105 relative overflow-hidden group">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
-                    <div className="flex flex-col min-w-0 relative z-10">
-                      <span className="text-gray-800 font-medium text-xs lg:text-sm leading-tight break-words ">
+                    <div className="flex items-center gap-2 min-w-0 relative z-10 w-full">
+                      <div className="border rounded-lg p-2 flex-shrink-0" style={{ backgroundColor: '#b8cdc5' }}>
+                        <MdOutlineDocumentScanner className="text-gray-800 text-xl lg:text-2xl" />
+                      </div>
+                      <span className="text-gray-800 font-medium text-xs lg:text-sm leading-tight break-words text-center md:text-left flex-1">
                         Tài liệu chuẩn BGD
                       </span>
                     </div>
@@ -98,8 +110,11 @@ const Hero = () => {
                   {/* Card 2: Nhóm hỗ trợ học tập 24/7 */}
                   <div className="bg-gray-100 border border-gray-300 rounded-lg p-2.5 lg:p-3 flex items-center justify-center flex-1 min-w-0 transition-all duration-300 hover:shadow-md hover:border-gray-400 hover:scale-105 relative overflow-hidden group">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
-                    <div className="flex flex-col min-w-0 relative z-10">
-                      <span className="text-gray-800 font-medium text-xs lg:text-sm leading-tight break-words">
+                    <div className="flex items-center gap-2 min-w-0 relative z-10 w-full">
+                      <div className="border rounded-lg p-2 flex-shrink-0" style={{ backgroundColor: '#b8cdc5' }}>
+                        <MdOutlineSupportAgent className="text-gray-800 text-xl lg:text-2xl" />
+                      </div>
+                      <span className="text-gray-800 font-medium text-xs lg:text-sm leading-tight break-words text-center md:text-left flex-1">
                         Dùng ngay cho giảng dạy
                       </span>
                     </div>
@@ -108,8 +123,11 @@ const Hero = () => {
                   {/* Card 3: Chứng nhận hoàn thành khóa học */}
                   <div className="bg-gray-100 border border-gray-300 rounded-lg p-2.5 lg:p-3 flex items-center justify-center flex-1 min-w-0 transition-all duration-300 hover:shadow-md hover:border-gray-400 hover:scale-105 relative overflow-hidden group">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
-                    <div className="flex flex-col min-w-0 relative z-10">
-                      <span className="text-gray-800 font-medium text-xs lg:text-sm leading-tight break-words">
+                    <div className="flex items-center gap-2 min-w-0 relative z-10 w-full">
+                      <div className="border rounded-lg p-2 flex-shrink-0" style={{ backgroundColor: '#b8cdc5' }}>
+                        <FaAward className="text-gray-800 text-xl lg:text-2xl" />
+                      </div>
+                      <span className="text-gray-800 font-medium text-xs lg:text-sm leading-tight break-words text-center md:text-left flex-1">
                         Sử dụng trọn đời
                       </span>
                     </div>
@@ -122,7 +140,7 @@ const Hero = () => {
                 >
                   <button
                     onClick={openLoginModal}
-                    className="text-white font-bold cursor-pointer text-base lg:text-lg p-2 rounded-lg transition-all duration-300 border border-primary bg-primary hover:bg-transparent hover:cursor-pointer hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:scale-95"
+                    className="text-black font-bold bg-[#d3f901] uppercase cursor-pointer text-base lg:text-xl p-2 rounded-full animate-breathe transition-all duration-300 border border-primary hover:bg-transparent hover:cursor-pointer hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 active:scale-95"
                     aria-label="Nhận tài liệu miễn phí"
                   >
                     Nhận tài liệu miễn phí

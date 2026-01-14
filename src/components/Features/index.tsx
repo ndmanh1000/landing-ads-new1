@@ -1,103 +1,77 @@
 "use client";
-import { Icon } from "@iconify/react";
-import { useMemo } from "react";
+import { Check } from "lucide-react";
 
 import { useLogin } from "@/contexts/LoginContext";
 
 const Features = () => {
+  const { openLoginModal } = useLogin();
+  const benefits = [
+    "Hơn 5.000 đề thi câu hỏi đã được số hóa",
 
-  const features = [
-    "Ban ngày vừa dạy, vừa quản lý lớp",
-
-    "Buổi tối phải chấm bài đến khuya",
-
-    "Cuối tuần tự tổng hợp điểm trên Excel",
-
-    "Soạn đề, chấm bài thủ công bằng MS",
-
-    "Dạy online, giao bài, nhắc học sinh qua Zalo, Zoom",
-
-    "Loạn vì nhiều công cụ, mất thời gian chuyển tab",
+    "Phân loại theo cấp độ nhận thức: Nhận biết - Thông hiểu - Vận dụng",
+    "Phù hợp nhiều trình độ học sinh",
+    "Có thể sử dụng cho: Soạn bài - Ra đề kiểm tra - Bài tập về nhà - Ôn luyện và đánh giá",
   ];
-
   // Generate random positions for particles once
-  const particleData = useMemo<Array<{ left: number; top: number; delay: number; duration: number }>>(() => {
-    return Array.from({ length: 12 }, () => ({
-      left: Math.random() * 100,
-      top: Math.random() * 100,
-      delay: Math.random() * 3,
-      duration: 3 + Math.random() * 2,
-    }));
-  }, []);
+
 
   return (
-    <section
-      className="pt-32 pb-20 relative overflow-hidden"
-      id="product"
-    >
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
-        style={{
-          backgroundImage: "url('/images/logo/bg1.jpg')"
-        }}
-      ></div>
-      <div className="absolute inset-0 bg-white/70 backdrop-blur-sm"></div>
-      <div className="container relative z-10">
-        <div className="bg-Lightsuccess bg-[url('/images/logo/bg-lines.png')] bg-no-repeat bg-contain bg-right-bottom rounded-3xl shadow-2xl border border-green-100 overflow-hidden">
-          <div className="flex flex-col gap-8 md:gap-10 lg:gap-12 py-10 md:py-12 lg:py-16 px-6 md:px-10 lg:px-20">
-            {/* Header Section - Title & Highlight */}
-            <div className="flex flex-col gap-4 md:gap-6 text-center animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              <p className="text-gray-900 text-2xl md:text-2xl font-extrabold leading-tight uppercase">
-                <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent ">
-                  1 Ngày Thầy/Cô tự xoay xở với... trăm công nghìn việc
-                </span>
-              </p>
+    <div className="min-h-screen mx-auto bg-gray-100 flex items-center justify-center p-4 font-sans">
+      {/* Card Container */}
+      <div className="bg-white rounded-[30px] shadow-xl max-w-6xl w-full flex flex-col lg:flex-row overflow-hidden p-4 lg:p-8 gap-8">
 
-            </div>
-
-            {/* Image Section - Centered */}
-            <div className="flex justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              <div className="w-full max-w-2xl lg:max-w-3xl flex items-center justify-center transform hover:scale-105 transition-transform duration-500">
-                <img
-                  src="/images/logo/tap2.png"
-                  alt="tap2"
-                  className="w-full h-auto drop-shadow-2xl"
-                />
-              </div>
-            </div>
-
-            {/* Features Grid - 2 Columns */}
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 lg:gap-6">
-                {features.map((feature, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-3 lg:gap-4 group bg-white/60 hover:bg-white/80 rounded-xl p-4 lg:p-5 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-green-100"
-                    style={{ animationDelay: `${0.6 + index * 0.1}s` }}
-                  >
-                    <Icon
-                      icon="mdi:check-circle"
-                      className="text-green-600 text-xl lg:text-2xl flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300"
-                    />
-                    <span className="text-sm lg:text-lg text-gray-800 leading-relaxed font-medium group-hover:text-gray-900 transition-colors duration-300">
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Bottom Text */}
-            <div className="flex flex-col items-center gap-2 mt-4 animate-fade-in-up" style={{ animationDelay: '1s' }}>
-              <p className="text-sm md:text-base lg:text-lg text-gray-700 font-medium bg-green-50/80 px-4 py-3 rounded-lg border border-green-200 inline-flex items-center gap-2 shadow-sm">
-                <span className="text-lg">👉</span>
-                Blue Edu được xây dựng dựa trên nhu cầu thực tế của Giáo viên
-              </p>
-            </div>
+        {/* Left Side: Image */}
+        <div className="w-full lg:w-1/2 flex items-center justify-center">
+          <div className="relative w-full h-64 lg:h-full min-h-[400px]">
+            <img
+              // Bạn có thể thay thế link này bằng ảnh local của bạn
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1472&q=80"
+              alt="Programming Laptop"
+              className="absolute inset-0 w-full h-full object-cover rounded-2xl shadow-lg"
+            />
           </div>
         </div>
+
+        {/* Right Side: Content */}
+        <div className="w-full lg:w-1/2 flex flex-col justify-center px-2 lg:px-6 py-4">
+
+          {/* Title */}
+          <p className="text-3xl lg:text-4xl font-extrabold text-slate-900 uppercase leading-tight mb-4 tracking-tight">
+            Thư viện 5.000 câu hỏi gồm những gì?
+          </p>
+
+          {/* Subtitle */}
+
+
+          {/* Benefits List */}
+          <ul className="space-y-4 mb-10">
+            {benefits.map((item, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center text-white">
+                    <Check size={14} strokeWidth={4} />
+                  </div>
+                </div>
+                <span className="text-gray-800 text-base font-medium leading-relaxed">
+                  {item}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          {/* Button */}
+          <div className="px-4 animate-breathe">
+            <button
+              onClick={openLoginModal}
+              className="rounded-full bg-[#d3f901] uppercase cursor-pointer md:px-6 md:py-2.5 p-2 text-base font-bold text-black transition-all duration-300 hover:bg-primary/90"
+            >
+              Dùng thử miễn phí
+            </button>
+          </div>
+
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

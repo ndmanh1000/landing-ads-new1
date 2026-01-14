@@ -43,7 +43,7 @@ export default function RootLayout({
           </div>
 
           {children}
-          <Footer />
+          {/* <Footer /> */}
           <ScrollToTop />
           <LoginModal />
         </Providers>
