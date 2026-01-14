@@ -69,7 +69,7 @@ const Hero = () => {
               Digital For Growth
             </div> */}
             <div className="flex flex-col gap-5">
-              <h1 className="text-2xl md:text-[50px] text-white uppercase leading-16 text-midnight_text text-center lg:text-start mx-auto lg:mx-0 pt-5">
+              <h1 className="text-2xl md:text-[48px] text-white uppercase leading-16 text-midnight_text text-center lg:text-start mx-auto lg:mx-0 pt-5">
                 Miễn phí thư viện số hơn +5.000 đề thi câu hỏi
               </h1>
 
