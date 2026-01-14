@@ -82,10 +82,10 @@ export default function Video() {
           {/* Right Column: Image with Decorations */}
           <div className="w-full lg:w-1/2 relative flex items-center justify-center mt-8 lg:mt-0">
             {/* Decorative Circle Top-Right (Lime Green) */}
-            <div className="absolute -top-10 -right-10 w-40 h-40 md:w-64 md:h-64 bg-[#D6EB00] rounded-full z-0 hidden md:block"></div>
+            <div className="absolute -top-10 -right-10 w-40 h-40 md:w-64 md:h-64 bg-[#ffc600] rounded-full z-0 hidden md:block"></div>
 
             {/* Decorative Semi-Circle Bottom-Left (Green) */}
-            <div className="absolute -bottom-6 left-0 md:left-10 w-24 h-24 md:w-40 md:h-40 bg-emerald-500 rounded-full z-0"></div>
+            <div className="absolute -bottom-6 left-0 md:left-10 w-24 h-24 md:w-40 md:h-40 bg-[#053cc0] rounded-full z-0"></div>
 
             {/* Main Image Container */}
             <div className="relative z-10 w-full h-full max-h-[500px] rounded-[40px] overflow-hidden shadow-xl">
